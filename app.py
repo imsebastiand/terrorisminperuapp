@@ -172,6 +172,22 @@ fig2 = px.histogram(dframehist, y="Department", color="Terrorist Group",
 # ----------------------
 #
 app.title = 'Terrorism in Peru'
+app.head = [
+    # Google Analytics tracking code
+    html.Script(
+        f"""
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9JPQYT0L1T"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-9JPQYT0L1T');
+        </script>
+        """
+    ),
+]
 
 app.layout = html.Div([
 
